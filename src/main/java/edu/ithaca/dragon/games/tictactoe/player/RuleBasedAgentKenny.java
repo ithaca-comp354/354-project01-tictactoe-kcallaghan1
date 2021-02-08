@@ -5,7 +5,7 @@ import org.javatuples.Pair;
 import java.util.Random;
 import edu.ithaca.dragon.games.tictactoe.board.TicTacToeBoard;
 
-public class RuleBasedAgent implements TicTacToePlayer {
+public class RuleBasedAgentKenny implements TicTacToePlayer {
 
     @Override
     public Pair<Integer, Integer> chooseSquare(TicTacToeBoard curBoard, char yourSymbol) {
@@ -46,10 +46,10 @@ public class RuleBasedAgent implements TicTacToePlayer {
             }
         }
 
-        // Unsure how to implement the other 3 rules...
+        // Unsure how to implement the other 2 rules...
 
 
-        // Try and take middle if available
+        // Rule 5: Place in such a way to maximize winning potential.
         if(curBoard.isSquareOpen(new Pair<>(1,1))){
             return new Pair<>(1,1);
         }
